@@ -26,7 +26,16 @@ class PredictPipeline:
 
 
 class CustomData:
-    def __init__(self, gender, race_ethnicity, parental_level_of_education, lunch, test_preparation_course, reading_score, writing_score):
+    def __init__(
+        self,
+        gender,
+        race_ethnicity,
+        parental_level_of_education,
+        lunch,
+        test_preparation_course,
+        reading_score,
+        writing_score,
+    ):
         self.gender = gender
         self.race_ethnicity = race_ethnicity
         self.parental_level_of_education = parental_level_of_education
@@ -47,5 +56,5 @@ class CustomData:
         }
         return pd.DataFrame(data)
 
-        #except Exception as e:
+        # except Exception as e:
         #    raise CustomException(e, sys)

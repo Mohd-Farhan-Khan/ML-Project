@@ -44,7 +44,7 @@ class DataIngestion:
                 self.ingestion_config.train_data_path, index=False, header=True
             )
 
-            train_set.to_csv(
+            test_set.to_csv(
                 self.ingestion_config.test_data_path, index=False, header=True
             )
 
@@ -57,7 +57,6 @@ class DataIngestion:
 
         except Exception as e:
             raise CustomException(e, sys)
-
 
 if __name__ == "__main__":
     obj = DataIngestion()
